@@ -8,10 +8,7 @@ import pl.edu.mimuw.pogodynka.model.WeatherData;
 public class WeatherDataSource1 implements WeatherDataSource {
 	private static final String URL = "http://api.openweathermap.org/data/2.5/weather?q=Warsaw,pl"
 									+ "&appid=8c26b4a938a0ffaffbcf33f2f877ab94";
-	/**
-	 * Returns WeatherData object that holds information about weather
-	 * @return WeatherData for specific town using data from 'second' url specified in the task
-	 */
+	
 	@Override
 	public WeatherData getData() {
 		String temp, press, cloud, windPow, windDir, humid;

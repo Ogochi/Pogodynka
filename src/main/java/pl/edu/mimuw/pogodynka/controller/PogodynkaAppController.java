@@ -34,6 +34,8 @@ public class PogodynkaAppController {
 	private final WeatherDataSource1 weatherSource1 = new WeatherDataSource1();
 	private final WeatherDataSource2 weatherSource2 = new WeatherDataSource2();
 	
+	private final int periodOfAutoRefreshing = 180000; // 3 minutes
+	
 	private StackPane placeForWindDirectionIcon;
 	
 	final ToggleGroup group = new ToggleGroup();
@@ -88,7 +90,27 @@ public class PogodynkaAppController {
 			
 			updatingWeather();
 		});
-
+		
+		updateWeatherPeriodically();
+	}
+	
+	/**
+	 * Updates weather periodically.
+	 * Period is specified in 'periodOfAutoRefreshing'
+	 */
+	private void updateWeatherPeriodically() {
+		Task<Integer> updateWeather = new Task<Integer>() {
+			@Override
+			protected Integer call() throws Exception {
+				while(true) {
+					updatingWeather();
+					
+					Thread.sleep(periodOfAutoRefreshing);
+				}
+			}
+		};
+		
+		startTask(updateWeather);
 	}
 	
 	private void updatingWeather() {

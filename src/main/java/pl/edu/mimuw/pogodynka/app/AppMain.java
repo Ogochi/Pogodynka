@@ -50,6 +50,8 @@ public class AppMain extends Application {
 				AppMain.class.getResource(MATERIAL_CSS).toExternalForm(),
 				AppMain.class.getResource(POGODYNKA_CSS).toExternalForm());
 		
+		Log.info("Application's up and running!");
+		
 		primaryStage.setScene(scene);
 
 		primaryStage.setWidth(450);
@@ -59,8 +61,6 @@ public class AppMain extends Application {
 		primaryStage.getIcons().add(new Image(LOGO));
 
 		primaryStage.show();
-
-		Log.info("Application's up and running!");
 	}
 	
 	private void onClose() {

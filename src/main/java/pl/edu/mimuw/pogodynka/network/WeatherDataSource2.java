@@ -9,10 +9,6 @@ import pl.edu.mimuw.pogodynka.model.WeatherData;
 public class WeatherDataSource2 implements WeatherDataSource {
 	private static final String URL = "http://www.meteo.waw.pl/";
 	
-	/**
-	 * Returns WeatherData object that holds information about weather
-	 * @return WeatherData for specific town using data from 'first' url specified in the task
-	 */
 	@Override
 	public WeatherData getData() {
 		String temp, press, cloud, windPow, windDir, humid;
