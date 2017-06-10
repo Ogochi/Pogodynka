@@ -20,5 +20,15 @@
   		<artifactId>ikonli-weathericons-pack</artifactId>
   		<version>1.9.0</version>
   	</dependency>
+  	<dependency>
+  		<groupId>org.kordamp.ikonli</groupId>
+  		<artifactId>ikonli-fontawesome-pack</artifactId>
+  		<version>1.9.0</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.kordamp.ikonli</groupId>
+  		<artifactId>ikonli-javafx</artifactId>
+  		<version>1.9.0</version>
+  	</dependency>
   </dependencies>
 </project>

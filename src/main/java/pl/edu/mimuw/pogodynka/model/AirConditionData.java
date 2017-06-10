@@ -3,9 +3,9 @@ package pl.edu.mimuw.pogodynka.model;
 import pl.edu.mimuw.pogodynka.app.Log;
 
 public class AirConditionData {
-	private final String PM2_5;
+	private String PM2_5;
 	
-	private final String PM10;
+	private String PM10;
 	
 	public AirConditionData(double pm2_5, double pm10) {
 		if(pm2_5 == -1)
