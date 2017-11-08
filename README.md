@@ -1,5 +1,7 @@
 # Pogodynka
 App fetching weather data from web and displaying it in GUI.
+
+All external dependencies are managed by Maven.
 ## Info
 Task done as a part of the subject **Object Oriented Programming** at University of Warsaw.
 
